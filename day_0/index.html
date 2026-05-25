@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!---->
+
     <!-- 
         Tailwind CDN
     -->
@@ -28,26 +30,26 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="#">Join Waitlist</a></li>
+                <li><a href="./waitlist.html" class="bg-[#0BB778] px-6 py-3 text-white">Join Waitlist</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="w-8/10">
-        <section class="hero flex items-center">
+        <section class="hero flex items-center my-40 gap-15">
 
-            <div class="left flex flex-col gap-5">
-                <div class="hd">
+            <div class="left flex flex-col gap-10">
+                <h1 class="hd text-6xl">
                     Task management built for fast-moving African teams.
-                </div>
+                </h1>
 
-                <div class="sb">
+                <p class="sb text-lg">
                     Replace WhatsApp chaos with a lightweight, offline-ready workspace. Keep your team aligned, even when the network drops.
-                </div>
+                </p>
 
-                <div class="hero-buttons">
-                    <a href="#">Join the waitlist</a>
-                    <a href="#">See how it works</a>
+                <div class="hero-buttons flex gap-5">
+                    <a href="#" class="bg-[#0BB778] px-6 py-3 text-white">Join the waitlist</a>
+                    <a href="#" class="border border-solid border-[#E5E9ED] px-6 py-3">See how it works</a>
                 </div>
 
             </div>
@@ -60,33 +62,33 @@
 
 
         <section class="features flex gap-5">
-            <div class="box">
-                <img src="./assets/offline.png" alt="">
+            <div class="box bg-[#F4F6F8] border border-solid border-[#E5E9ED] px-6 py-10 flex flex-col gap-8">
+                <img src="./assets/offline.png" alt="" class="h-10 w-10">
 
-                <div class="text">
+                <div class="text flex flex-col gap-3">
                     <p>Offline-friendly syncing</p>
                     <p>Keep working when the network drops. Your tasks sync automatically when you're back online.</p>
                 </div>
             </div>
-            <div class="box">
-                <img src="./assets/fast" alt="">
+            <div class="box bg-[#F4F6F8] border border-solid border-[#E5E9ED] px-6 py-10 flex flex-col gap-8">
+                <img src="./assets/fast.png" alt="" class="h-10 w-10">
 
-                <div class="text">
+                <div class="text flex flex-col gap-3">
                     <p>Fast task assignment</p>
                     <p>Assign tasks to team members instantly with clear deadlines and accountability.</p>
                 </div>
             </div>
-            <div class="box">
-                <img src="./assets/mobile.png" alt="">
+            <div class="box bg-[#F4F6F8] border border-solid border-[#E5E9ED] px-6 py-10 flex flex-col gap-8">
+                <img src="./assets/mobile.png" alt="" class="h-10 w-10">
 
-                <div class="text">
+                <div class="text flex flex-col gap-3">
                     <p>Mobile-first experience</p>
                     <p>Designed for the small screens your team uses every day. Fast, native-feeling performance.</p>
                 </div>
             </div>
         </section>
 
-        <section class="how-works flex flex-col items-center my-15 gap-3">
+        <section class="how-works flex flex-col items-center my-15 gap-3 mt-50">
             <h3>How it works</h3>
             <p>Set up in minutes, sync in seconds. Taskr is built for speed and reliability, even when the network drops.</p>
         </section>
@@ -121,6 +123,43 @@
 
             <div class="right">
                 <img src="./assets//progress.png" alt="">
+            </div>
+        </section>
+        
+        <section class="pricing flex flex-col items-center my-15 gap-6 mt-10">
+            <h3>Pricing</h3>
+            <p>Simple pricing for growing teams. Start free, upgrade as you scale.</p>
+
+            <div class="plans grid grid-cols-3 gap-6 mt-6">
+                <div class="plan bg-[#F4F6F8] border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
+                    <h4 class="text-xl font-semibold">Starter</h4>
+                    <p class="mt-2">Free</p>
+                    <ul class="mt-2">
+                        <li>Up to 10 users</li>
+                        <li>Basic task features</li>
+                    </ul>
+                    <a class="mt-4 bg-[#0BB778] text-white px-4 py-2 rounded" href="./waitlist.html">Get started</a>
+                </div>
+
+                <div class="plan bg-[#F4F6F8] border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
+                    <h4 class="text-xl font-semibold">Team</h4>
+                    <p class="mt-2">$5 / user / month</p>
+                    <ul class="mt-2">
+                        <li>Unlimited users</li>
+                        <li>Priority sync</li>
+                    </ul>
+                    <a class="mt-4 border border-solid border-[#E5E9ED] px-4 py-2 rounded" href="./waitlist.html">Join waitlist</a>
+                </div>
+
+                <div class="plan bg-[#F4F6F8] border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
+                    <h4 class="text-xl font-semibold">Enterprise</h4>
+                    <p class="mt-2">Custom</p>
+                    <ul class="mt-2">
+                        <li>On-premise options</li>
+                        <li>Dedicated support</li>
+                    </ul>
+                    <a class="mt-4 border border-solid border-[#E5E9ED] px-4 py-2 rounded" href="./waitlist.html">Contact sales</a>
+                </div>
             </div>
         </section>
     </main>
