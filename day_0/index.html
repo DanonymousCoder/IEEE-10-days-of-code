@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        Tailwind CDN
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- 
+        Link to CSS
+    -->
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Taskr | Landing Page</title>
+</head>
+<body class="flex flex-col items-center">
+    
+    <header class="w-full flex justify-center border-b border-solid border-[#E5E9ED]">
+        <nav class="flex justify-between py-7 w-8/10">
+            <div class="logo flex">
+                <img src="./assets/Container.png" alt="">
+                <h1>Taskr</h1>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#">Join Waitlist</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="w-8/10">
+        <section class="hero flex items-center">
+
+            <div class="left flex flex-col gap-5">
+                <div class="hd">
+                    Task management built for fast-moving African teams.
+                </div>
+
+                <div class="sb">
+                    Replace WhatsApp chaos with a lightweight, offline-ready workspace. Keep your team aligned, even when the network drops.
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#">Join the waitlist</a>
+                    <a href="#">See how it works</a>
+                </div>
+
+            </div>
+
+            <div class="right">
+                <img src="./assets/Abstract UI Mockup.png" alt="">
+            </div>
+
+        </section>
+
+
+        <section class="features flex gap-5">
+            <div class="box">
+                <img src="./assets/offline.png" alt="">
+
+                <div class="text">
+                    <p>Offline-friendly syncing</p>
+                    <p>Keep working when the network drops. Your tasks sync automatically when you're back online.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./assets/fast" alt="">
+
+                <div class="text">
+                    <p>Fast task assignment</p>
+                    <p>Assign tasks to team members instantly with clear deadlines and accountability.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./assets/mobile.png" alt="">
+
+                <div class="text">
+                    <p>Mobile-first experience</p>
+                    <p>Designed for the small screens your team uses every day. Fast, native-feeling performance.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-works flex flex-col items-center my-15 gap-3">
+            <h3>How it works</h3>
+            <p>Set up in minutes, sync in seconds. Taskr is built for speed and reliability, even when the network drops.</p>
+        </section>
+
+        <section class="workspace flex items-center gap-35 mt-25">
+            <div class="left">
+                <h4>Create workspace</h4>
+                <p>Set up your team's workspace quickly. Invite members via simple links or email, and organize your core projects without any unnecessary configuration overhead.</p>
+            </div>
+
+            <div class="right">
+                <img src="./assets/workspace.png" alt="">
+            </div>
+        </section>
+
+        <section class="tasks flex flex-row-reverse items-center gap-35 mt-10">
+            <div class="left">
+                <h4>Assign tasks</h4>
+                <p>Delegate responsibilities clearly. Create tasks, set deadlines, and tag team members. Our offline-first architecture ensures you can prep work even on a bad connection.</p>
+            </div>
+
+            <div class="right">
+                <img src="./assets/tasks.png" alt="">
+            </div>
+        </section>
+
+        <section class="progress flex items-center gap-35 mt-10">
+            <div class="left">
+                <h4>Track progress</h4>
+                <p>Monitor completion offline or online. When the network returns, everything syncs instantly. Stay informed with lightweight, non-intrusive notifications.</p>
+            </div>
+
+            <div class="right">
+                <img src="./assets//progress.png" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-8/10">
+
+    </footer>
+
+
+    <!-- 
+        Link to JS
+    -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        Tailwind CDN
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- 
+        Link to CSS
+    -->
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Join Waitlist | Taskr</title>
+</head>
+<body class="flex flex-col items-center h-screen bg-[#F4F6F8]">
+
+    <main class="h-8/10 w-full flex justify-center items-center">
+        <div class="card flex flex-col items-center bg-[#FFFFFF] px-10 py-20">
+            <h2>Get early access</h2>
+            <p>Join the Taskr waitlist today.</p>
+
+            <form action="#" class="flex flex-col">
+                <input type="text" placeholder="Name"
+                class="w-full ">
+
+                <input type="email" placeholder="Email"
+                >
+
+                <select name="size" id="team-size">
+                    <option value="1">1</option>
+                    <option value="2">2-3</option>
+                    <option value="3">3-7</option>
+                    <option value="4">7-50</option>
+                </select>
+            </form>
+        </div>
+    </main>
+
+    <footer class="h-2/10 w-full flex flex-col items-center justify-center">
+        <div class="contact flex">
+            <a href="#">X</a>
+            <a href="#">Email</a>
+        </div>
+        <p class="copyright">
+            &copy 2026 Taskr. Built in Lagos.
+        </p>
+    </footer>
+</body>
+</html>
