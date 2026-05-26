@@ -134,40 +134,93 @@
             </div>
         </section>
         
-        <section class="pricing flex flex-col items-center my-15 gap-6 mt-50">
-            <h3 class="text-[#1A1D20] text-4xl font-bold">Transparent Pricing for Growing Teams</h3>
-            <p class="text-[#828C95] text-lg">Empower your Lagos-based startup with tools built for high-velocity execution. Scale from side-project to industry leader.</p>
+        <section class="pricing w-full flex flex-col items-center my-15 gap-6 my-40">
+            <header class="mb-16 max-w-2xl mx-auto text-center">
+                <h3 class="text-[#1A1D20] text-4xl font-bold mb-4">
+                    Transparent Pricing for Growing Teams
+                </h3>
+                <p class="text-[#828C95] text-lg font-medium leading-relaxed">
+                    Empower your Lagos-based startup with tools built for high-velocity execution. Scale from side-project to industry leader.
+                </p>
+            </header>
 
-            <div class="plans grid grid-cols-3 gap-6 mt-6">
-                <div class="plan border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
-                    <h4 class="text-xl font-semibold">Starter</h4>
-                    <p class="mt-2">Free</p>
-                    <ul class="mt-2">
-                        <li>Up to 10 users</li>
-                        <li>Basic task features</li>
-                    </ul>
-                    <a class="mt-4 text-white px-4 py-2 rounded" href="./waitlist.html">Get started</a>
-                </div>
+            <div class="grid md:grid-cols-2 gap-8 items-stretch w-full max-w-6xl mx-auto text-left">
+                <section class="w-full border border-slate-200 rounded-2xl p-8 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Free Plan</h4>
+                        <div class="flex items-baseline mb-3">
+                            <span class="text-3xl font-extrabold text-slate-900">₦0</span>
+                            <span class="text-xs text-slate-400 font-medium ml-1">/forever</span>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-8 font-medium">Perfect for individuals and side hustles.</p>
 
-                <div class="plan border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
-                    <h4 class="text-xl font-semibold">Team</h4>
-                    <p class="mt-2">$5 / user / month</p>
-                    <ul class="mt-2">
-                        <li>Unlimited users</li>
-                        <li>Priority sync</li>
-                    </ul>
-                    <a class="mt-4 border border-solid border-[#E5E9ED] px-4 py-2 rounded" href="./waitlist.html">Join waitlist</a>
-                </div>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                                <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Up to 5 users</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                                <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Basic task management</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                                <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Mobile access</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-300 font-medium line-through decoration-transparent">
+                                <svg class="w-5 h-5 text-slate-300 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                <span>Priority support</span>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="plan border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
-                    <h4 class="text-xl font-semibold">Enterprise</h4>
-                    <p class="mt-2">Custom</p>
-                    <ul class="mt-2">
-                        <li>On-premise options</li>
-                        <li>Dedicated support</li>
-                    </ul>
-                    <a class="mt-4 border border-solid border-[#E5E9ED] px-4 py-2 rounded" href="./waitlist.html">Contact sales</a>
-                </div>
+                    <button class="w-full py-3 px-4 rounded-xl border border-emerald-500 text-emerald-600 font-semibold text-sm hover:bg-emerald-50 transition-colors mt-auto">
+                        Get Started
+                    </button>
+                </section>
+
+                <section class="relative w-full border-2 border-emerald-500 rounded-2xl p-8 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition-shadow">
+                    <span class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-white text-[11px] font-bold tracking-wider uppercase py-1 px-4 rounded-full shadow-sm">
+                        Most Popular
+                    </span>
+
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Team Plan</h4>
+                        <div class="flex items-baseline mb-3">
+                            <span class="text-3xl font-extrabold text-slate-900">₦5,000</span>
+                            <span class="text-xs text-slate-400 font-medium ml-1">/month</span>
+                        </div>
+                        <p class="text-sm text-slate-500 mb-8 font-medium">Ideal for high-growth tech teams.</p>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                                <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Unlimited collaborators</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                                <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Advanced growth analytics</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                                <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Priority 24/7 support</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                                <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Custom task workflows</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-600 font-medium">
+                                <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Slack & Discord integration</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="w-full py-3 px-4 rounded-xl bg-emerald-500 text-white font-semibold text-sm hover:bg-emerald-600 transition-colors mt-auto shadow-sm shadow-emerald-200">
+                        Start Team Trial
+                    </button>
+                </section>
+
             </div>
         </section>
     </main>
