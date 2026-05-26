@@ -31,13 +31,21 @@
 <body class="flex flex-col items-center overflow-x-hidden">
     
     <header class="w-full flex justify-center border-b border-solid border-[#E5E9ED] px-4 sm:px-6 lg:px-0">
-        <nav class="flex items-center justify-between gap-4 py-5 sm:py-7 w-full sm:w-11/12 lg:w-8/10 overflow-x-auto whitespace-nowrap">
+        <nav class="relative flex items-center justify-between gap-4 py-5 sm:py-7 w-full sm:w-11/12 lg:w-8/10">
             <div class="logo flex gap-2 shrink-0">
                 <img src="./assets/Container.png" alt="">
                 <h1 class="font-bold text-xl">Taskr</h1>
             </div>
 
-            <div class="flex items-center gap-4 sm:gap-10 ml-auto shrink-0">
+            <button id="nav-toggle" type="button" class="inline-flex items-center justify-center rounded-xl border border-[#E5E9ED] p-3 text-[#1A1D20] sm:hidden" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 6h16"></path>
+                    <path d="M4 12h16"></path>
+                    <path d="M4 18h16"></path>
+                </svg>
+            </button>
+
+            <div class="hidden sm:flex items-center gap-4 sm:gap-5 ml-auto shrink-0">
                 <ul class="nav-links flex items-center gap-4 sm:gap-5">
                     <li><a href="#" class="text-[#1A1D20] font-medium">Features</a></li>
                     <li><a href="#" class="text-[#1A1D20] font-medium">Pricing</a></li>
@@ -46,6 +54,18 @@
                 </ul>
 
                 <a href="./waitlist.html" class="bg-[#0BB778] px-6 py-3 text-white rounded-xl font-semibold text-center">Join Waitlist</a>
+            </div>
+
+            <div id="nav-menu" class="hidden sm:hidden absolute left-4 right-4 top-full mt-2 bg-white rounded-2xl border border-[#E5E9ED] p-4 shadow-md z-50">
+                <ul class="flex flex-col gap-3">
+                    <li><a href="#" class="block text-[#1A1D20] font-medium">Features</a></li>
+                    <li><a href="#" class="block text-[#1A1D20] font-medium">Pricing</a></li>
+                    <li><a href="#" class="block text-[#1A1D20] font-medium">Waitlist</a></li>
+                    <li><a href="#" class="block text-[#1A1D20] font-medium">Privacy</a></li>
+                </ul>
+                <div class="mt-4">
+                    <a href="./waitlist.html" class="block bg-[#0BB778] px-6 py-3 text-white rounded-xl font-semibold text-center">Join Waitlist</a>
+                </div>
             </div>
         </nav>
     </header>
