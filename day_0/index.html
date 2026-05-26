@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!---->
-
-    <!-- 
-        Tailwind CDN
+    <!--
+        Montserrat font
     -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 
     <!-- 
         Link to CSS
@@ -18,19 +19,26 @@
 
     <link rel="stylesheet" href="styles.css">
 
+
+    <!-- 
+        Tailwind CDN
+    -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <title>Taskr | Landing Page</title>
 </head>
 <body class="flex flex-col items-center">
     
     <header class="w-full flex justify-center border-b border-solid border-[#E5E9ED]">
         <nav class="flex justify-between py-7 w-8/10">
-            <div class="logo flex">
+            <div class="logo flex gap-2">
                 <img src="./assets/Container.png" alt="">
-                <h1>Taskr</h1>
+                <h1 class="font-bold text-xl">Taskr</h1>
             </div>
 
             <ul class="nav-links">
-                <li><a href="./waitlist.html" class="bg-[#0BB778] px-6 py-3 text-white">Join Waitlist</a></li>
+                <li><a href="./waitlist.html" class="bg-[#0BB778] px-6 py-3 text-white rounded-xl font-semibold">Join Waitlist</a></li>
             </ul>
         </nav>
     </header>
@@ -38,65 +46,65 @@
     <main class="w-8/10">
         <section class="hero flex items-center my-40 gap-15">
 
-            <div class="left flex flex-col gap-10">
-                <h1 class="hd text-6xl">
+            <div class="left flex flex-col gap-10 max-w-6/10">
+                <h1 class="hd text-6xl font-bold">
                     Task management built for fast-moving African teams.
                 </h1>
 
-                <p class="sb text-lg">
+                <p class="sb text-lg text-[#828C95] text-lg">
                     Replace WhatsApp chaos with a lightweight, offline-ready workspace. Keep your team aligned, even when the network drops.
                 </p>
 
                 <div class="hero-buttons flex gap-5">
-                    <a href="#" class="bg-[#0BB778] px-6 py-3 text-white">Join the waitlist</a>
-                    <a href="#" class="border border-solid border-[#E5E9ED] px-6 py-3">See how it works</a>
+                    <a href="#" class="bg-[#0BB778] px-6 py-3 text-white rounded-xl font-semibold">Join the waitlist</a>
+                    <a href="#" class="border border-solid border-[#E5E9ED] px-6 py-3 rounded-xl font-semibold">See how it works</a>
                 </div>
 
             </div>
 
             <div class="right">
-                <img src="./assets/Abstract UI Mockup.png" alt="">
+                <img src="./assets/Abstract UI Mockup.png" alt="" class="h-100">
             </div>
 
         </section>
 
 
         <section class="features flex gap-5">
-            <div class="box bg-[#F4F6F8] border border-solid border-[#E5E9ED] px-6 py-10 flex flex-col gap-8">
+            <div class="box bg-[#F4F6F8] border border-solid border-[#E5E9ED] px-6 py-10 flex flex-col gap-8 rounded-xl">
                 <img src="./assets/offline.png" alt="" class="h-10 w-10">
 
                 <div class="text flex flex-col gap-3">
-                    <p>Offline-friendly syncing</p>
-                    <p>Keep working when the network drops. Your tasks sync automatically when you're back online.</p>
+                    <p class="text-[#1A1D20] font-bold">Offline-friendly syncing</p>
+                    <p class="text-[#828C95] text-md">Keep working when the network drops. Your tasks sync automatically when you're back online.</p>
                 </div>
             </div>
-            <div class="box bg-[#F4F6F8] border border-solid border-[#E5E9ED] px-6 py-10 flex flex-col gap-8">
+            <div class="box bg-[#F4F6F8] border border-solid border-[#E5E9ED] px-6 py-10 flex flex-col gap-8 rounded-xl">
                 <img src="./assets/fast.png" alt="" class="h-10 w-10">
 
                 <div class="text flex flex-col gap-3">
-                    <p>Fast task assignment</p>
-                    <p>Assign tasks to team members instantly with clear deadlines and accountability.</p>
+                    <p class="text-[#1A1D20] font-bold">Fast task assignment</p>
+                    <p class="text-[#828C95] text-md">Assign tasks to team members instantly with clear deadlines and accountability.</p>
                 </div>
             </div>
-            <div class="box bg-[#F4F6F8] border border-solid border-[#E5E9ED] px-6 py-10 flex flex-col gap-8">
+            <div class="box bg-[#F4F6F8] border border-solid border-[#E5E9ED] px-6 py-10 flex flex-col gap-8 rounded-xl">
                 <img src="./assets/mobile.png" alt="" class="h-10 w-10">
 
                 <div class="text flex flex-col gap-3">
-                    <p>Mobile-first experience</p>
-                    <p>Designed for the small screens your team uses every day. Fast, native-feeling performance.</p>
+                    <p class="text-[#1A1D20] font-bold">Mobile-first experience</p>
+                    <p class="text-[#828C95] text-md">Designed for the small screens your team uses every day. Fast, native-feeling performance.</p>
                 </div>
             </div>
         </section>
 
         <section class="how-works flex flex-col items-center my-15 gap-3 mt-50">
-            <h3>How it works</h3>
-            <p>Set up in minutes, sync in seconds. Taskr is built for speed and reliability, even when the network drops.</p>
+            <h3 class="text-[#1A1D20] font-bold text-3xl">How it works</h3>
+            <p class="text-[#828C95] text-lg">Set up in minutes, sync in seconds. Taskr is built for speed and reliability, even when the network drops.</p>
         </section>
 
         <section class="workspace flex items-center gap-35 mt-25">
-            <div class="left">
-                <h4>Create workspace</h4>
-                <p>Set up your team's workspace quickly. Invite members via simple links or email, and organize your core projects without any unnecessary configuration overhead.</p>
+            <div class="left flex flex-col gap-3 text-right">
+                <h4 class="text-[#1A1D20] font-bold text-2xl">Create workspace</h4>
+                <p class="text-[#828C95] text-lg">Set up your team's workspace quickly. Invite members via simple links or email, and organize your core projects without any unnecessary configuration overhead.</p>
             </div>
 
             <div class="right">
@@ -105,9 +113,9 @@
         </section>
 
         <section class="tasks flex flex-row-reverse items-center gap-35 mt-10">
-            <div class="left">
-                <h4>Assign tasks</h4>
-                <p>Delegate responsibilities clearly. Create tasks, set deadlines, and tag team members. Our offline-first architecture ensures you can prep work even on a bad connection.</p>
+            <div class="left flex flex-col gap-3">
+                <h4 class="text-[#1A1D20] font-bold text-2xl">Assign tasks</h4>
+                <p class="text-[#828C95] text-lg">Delegate responsibilities clearly. Create tasks, set deadlines, and tag team members. Our offline-first architecture ensures you can prep work even on a bad connection.</p>
             </div>
 
             <div class="right">
@@ -116,9 +124,9 @@
         </section>
 
         <section class="progress flex items-center gap-35 mt-10">
-            <div class="left">
-                <h4>Track progress</h4>
-                <p>Monitor completion offline or online. When the network returns, everything syncs instantly. Stay informed with lightweight, non-intrusive notifications.</p>
+            <div class="left flex flex-col gap-3 text-right">
+                <h4 class="text-[#1A1D20] font-bold text-2xl">Track progress</h4>
+                <p class="text-[#828C95] text-lg">Monitor completion offline or online. When the network returns, everything syncs instantly. Stay informed with lightweight, non-intrusive notifications.</p>
             </div>
 
             <div class="right">
@@ -126,22 +134,22 @@
             </div>
         </section>
         
-        <section class="pricing flex flex-col items-center my-15 gap-6 mt-10">
-            <h3>Pricing</h3>
-            <p>Simple pricing for growing teams. Start free, upgrade as you scale.</p>
+        <section class="pricing flex flex-col items-center my-15 gap-6 mt-50">
+            <h3 class="text-[#1A1D20] text-4xl font-bold">Transparent Pricing for Growing Teams</h3>
+            <p class="text-[#828C95] text-lg">Empower your Lagos-based startup with tools built for high-velocity execution. Scale from side-project to industry leader.</p>
 
             <div class="plans grid grid-cols-3 gap-6 mt-6">
-                <div class="plan bg-[#F4F6F8] border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
+                <div class="plan border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
                     <h4 class="text-xl font-semibold">Starter</h4>
                     <p class="mt-2">Free</p>
                     <ul class="mt-2">
                         <li>Up to 10 users</li>
                         <li>Basic task features</li>
                     </ul>
-                    <a class="mt-4 bg-[#0BB778] text-white px-4 py-2 rounded" href="./waitlist.html">Get started</a>
+                    <a class="mt-4 text-white px-4 py-2 rounded" href="./waitlist.html">Get started</a>
                 </div>
 
-                <div class="plan bg-[#F4F6F8] border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
+                <div class="plan border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
                     <h4 class="text-xl font-semibold">Team</h4>
                     <p class="mt-2">$5 / user / month</p>
                     <ul class="mt-2">
@@ -151,7 +159,7 @@
                     <a class="mt-4 border border-solid border-[#E5E9ED] px-4 py-2 rounded" href="./waitlist.html">Join waitlist</a>
                 </div>
 
-                <div class="plan bg-[#F4F6F8] border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
+                <div class="plan border border-solid border-[#E5E9ED] p-6 rounded flex flex-col gap-4 items-start">
                     <h4 class="text-xl font-semibold">Enterprise</h4>
                     <p class="mt-2">Custom</p>
                     <ul class="mt-2">
@@ -164,8 +172,22 @@
         </section>
     </main>
 
-    <footer class="w-8/10">
-
+    <footer class="w-full border-t border-[#E5E9ED] border flex justify-center py-10">
+        <section class="footer flex w-8/10 justify-between items-center">
+            <div class="logo flex gap-2 items-center">
+                <img src="./assets/Container.png" alt="">
+                <h1 class="font-bold text-xl">Taskr</h1>
+            </div>
+            <ul class="footer-links flex gap-5">
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Waitlist</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+            <p class="copy text-right max-w-3/10">
+                &copy 2026 Taskr. Built for the next generation of African teams in Lagos.
+            </p>
+        </section>
     </footer>
 
 
