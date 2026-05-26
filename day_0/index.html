@@ -28,48 +28,55 @@
 
     <title>Taskr | Landing Page</title>
 </head>
-<body class="flex flex-col items-center">
+<body class="flex flex-col items-center overflow-x-hidden">
     
-    <header class="w-full flex justify-center border-b border-solid border-[#E5E9ED]">
-        <nav class="flex justify-between py-7 w-8/10">
-            <div class="logo flex gap-2">
+    <header class="w-full flex justify-center border-b border-solid border-[#E5E9ED] px-4 sm:px-6 lg:px-0">
+        <nav class="flex items-center justify-between gap-4 py-5 sm:py-7 w-full sm:w-11/12 lg:w-8/10 overflow-x-auto whitespace-nowrap">
+            <div class="logo flex gap-2 shrink-0">
                 <img src="./assets/Container.png" alt="">
                 <h1 class="font-bold text-xl">Taskr</h1>
             </div>
 
-            <ul class="nav-links">
-                <li><a href="./waitlist.html" class="bg-[#0BB778] px-6 py-3 text-white rounded-xl font-semibold">Join Waitlist</a></li>
-            </ul>
+            <div class="flex items-center gap-4 sm:gap-10 ml-auto shrink-0">
+                <ul class="nav-links flex items-center gap-4 sm:gap-5">
+                    <li><a href="#" class="text-[#1A1D20] font-medium">Features</a></li>
+                    <li><a href="#" class="text-[#1A1D20] font-medium">Pricing</a></li>
+                    <li><a href="#" class="text-[#1A1D20] font-medium">Waitlist</a></li>
+                    <li><a href="#" class="text-[#1A1D20] font-medium">Privacy</a></li>
+                </ul>
+
+                <a href="./waitlist.html" class="bg-[#0BB778] px-6 py-3 text-white rounded-xl font-semibold text-center">Join Waitlist</a>
+            </div>
         </nav>
     </header>
 
-    <main class="w-8/10">
-        <section class="hero flex items-center my-40 gap-15">
+    <main class="w-full px-4 sm:px-6 lg:px-0 sm:w-11/12 lg:w-8/10">
+        <section class="hero flex flex-col lg:flex-row items-center my-16 sm:my-24 lg:my-40 gap-10 lg:gap-15">
 
-            <div class="left flex flex-col gap-10 max-w-6/10">
-                <h1 class="hd text-6xl font-bold">
+            <div class="left flex flex-col gap-8 sm:gap-10 max-w-none lg:max-w-6/10 text-center lg:text-left">
+                <h1 class="hd text-4xl sm:text-5xl lg:text-6xl font-bold">
                     Task management built for fast-moving African teams.
                 </h1>
 
-                <p class="sb text-lg text-[#828C95] text-lg">
+                <p class="sb text-base sm:text-lg text-[#828C95]">
                     Replace WhatsApp chaos with a lightweight, offline-ready workspace. Keep your team aligned, even when the network drops.
                 </p>
 
-                <div class="hero-buttons flex gap-5">
+                <div class="hero-buttons flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start">
                     <a href="#" class="bg-[#0BB778] px-6 py-3 text-white rounded-xl font-semibold">Join the waitlist</a>
                     <a href="#" class="border border-solid border-[#E5E9ED] px-6 py-3 rounded-xl font-semibold">See how it works</a>
                 </div>
 
             </div>
 
-            <div class="right">
-                <img src="./assets/Abstract UI Mockup.png" alt="" class="h-100">
+            <div class="right w-full lg:w-auto flex justify-center">
+                <img src="./assets/Abstract UI Mockup.png" alt="" class="w-full max-w-md lg:max-w-none h-auto">
             </div>
 
         </section>
 
 
-        <section class="features flex gap-5">
+        <section class="features grid grid-cols-1 md:grid-cols-3 gap-5">
             <div class="box bg-[#F4F6F8] border border-solid border-[#E5E9ED] px-6 py-10 flex flex-col gap-8 rounded-xl">
                 <img src="./assets/offline.png" alt="" class="h-10 w-10">
 
@@ -96,46 +103,46 @@
             </div>
         </section>
 
-        <section class="how-works flex flex-col items-center my-15 gap-3 mt-50">
-            <h3 class="text-[#1A1D20] font-bold text-3xl">How it works</h3>
-            <p class="text-[#828C95] text-lg">Set up in minutes, sync in seconds. Taskr is built for speed and reliability, even when the network drops.</p>
+        <section class="how-works flex flex-col items-center text-center my-15 gap-3 mt-20 sm:mt-32 lg:mt-50 px-2">
+            <h3 class="text-[#1A1D20] font-bold text-2xl sm:text-3xl">How it works</h3>
+            <p class="text-[#828C95] text-base sm:text-lg max-w-3xl">Set up in minutes, sync in seconds. Taskr is built for speed and reliability, even when the network drops.</p>
         </section>
 
-        <section class="workspace flex items-center gap-35 mt-25">
-            <div class="left flex flex-col gap-3 text-right">
+        <section class="workspace flex flex-col lg:flex-row items-center gap-8 lg:gap-35 mt-16 lg:mt-25">
+            <div class="left flex flex-col gap-3 text-center lg:text-right">
                 <h4 class="text-[#1A1D20] font-bold text-2xl">Create workspace</h4>
-                <p class="text-[#828C95] text-lg">Set up your team's workspace quickly. Invite members via simple links or email, and organize your core projects without any unnecessary configuration overhead.</p>
+                <p class="text-[#828C95] text-base sm:text-lg">Set up your team's workspace quickly. Invite members via simple links or email, and organize your core projects without any unnecessary configuration overhead.</p>
             </div>
 
-            <div class="right">
-                <img src="./assets/workspace.png" alt="">
+            <div class="right w-full flex justify-center">
+                <img src="./assets/workspace.png" alt="" class="w-full max-w-md h-auto">
             </div>
         </section>
 
-        <section class="tasks flex flex-row-reverse items-center gap-35 mt-10">
-            <div class="left flex flex-col gap-3">
+        <section class="tasks flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-35 mt-16 lg:mt-10">
+            <div class="left flex flex-col gap-3 text-center lg:text-left">
                 <h4 class="text-[#1A1D20] font-bold text-2xl">Assign tasks</h4>
-                <p class="text-[#828C95] text-lg">Delegate responsibilities clearly. Create tasks, set deadlines, and tag team members. Our offline-first architecture ensures you can prep work even on a bad connection.</p>
+                <p class="text-[#828C95] text-base sm:text-lg">Delegate responsibilities clearly. Create tasks, set deadlines, and tag team members. Our offline-first architecture ensures you can prep work even on a bad connection.</p>
             </div>
 
-            <div class="right">
-                <img src="./assets/tasks.png" alt="">
+            <div class="right w-full flex justify-center">
+                <img src="./assets/tasks.png" alt="" class="w-full max-w-md h-auto">
             </div>
         </section>
 
-        <section class="progress flex items-center gap-35 mt-10">
-            <div class="left flex flex-col gap-3 text-right">
+        <section class="progress flex flex-col lg:flex-row items-center gap-8 lg:gap-35 mt-16 lg:mt-10">
+            <div class="left flex flex-col gap-3 text-center lg:text-right">
                 <h4 class="text-[#1A1D20] font-bold text-2xl">Track progress</h4>
-                <p class="text-[#828C95] text-lg">Monitor completion offline or online. When the network returns, everything syncs instantly. Stay informed with lightweight, non-intrusive notifications.</p>
+                <p class="text-[#828C95] text-base sm:text-lg">Monitor completion offline or online. When the network returns, everything syncs instantly. Stay informed with lightweight, non-intrusive notifications.</p>
             </div>
 
-            <div class="right">
-                <img src="./assets//progress.png" alt="">
+            <div class="right w-full flex justify-center">
+                <img src="./assets//progress.png" alt="" class="w-full max-w-md h-auto">
             </div>
         </section>
         
-        <section class="pricing w-full flex flex-col items-center my-15 gap-6 my-40">
-            <header class="mb-16 max-w-2xl mx-auto text-center">
+        <section class="pricing w-full flex flex-col items-center mt-20 sm:mt-24 lg:mt-40 mb-20 sm:mb-24 lg:mb-40 gap-6">
+            <header class="mb-10 sm:mb-16 max-w-2xl mx-auto text-center px-2">
                 <h3 class="text-[#1A1D20] text-4xl font-bold mb-4">
                     Transparent Pricing for Growing Teams
                 </h3>
@@ -144,7 +151,7 @@
                 </p>
             </header>
 
-            <div class="grid md:grid-cols-2 gap-8 items-stretch w-full max-w-6xl mx-auto text-left">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch w-full max-w-6xl mx-auto text-left">
                 <section class="w-full border border-slate-200 rounded-2xl p-8 flex flex-col justify-between bg-white shadow-sm hover:shadow-md transition-shadow">
                     <div>
                         <h4 class="text-xl font-bold text-slate-900 mb-2">Free Plan</h4>
@@ -225,19 +232,19 @@
         </section>
     </main>
 
-    <footer class="w-full border-t border-[#E5E9ED] border flex justify-center py-10">
-        <section class="footer flex w-8/10 justify-between items-center">
+    <footer class="w-full border-t border-[#E5E9ED] border flex justify-center py-10 px-4 sm:px-6 lg:px-0">
+        <section class="footer flex flex-col md:flex-row gap-6 md:gap-4 w-full sm:w-11/12 lg:w-8/10 justify-between items-center text-center md:text-left">
             <div class="logo flex gap-2 items-center">
                 <img src="./assets/Container.png" alt="">
                 <h1 class="font-bold text-xl">Taskr</h1>
             </div>
-            <ul class="footer-links flex gap-5">
+            <ul class="footer-links flex flex-wrap justify-center gap-5">
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Pricing</a></li>
                 <li><a href="#">Waitlist</a></li>
                 <li><a href="#">Privacy</a></li>
             </ul>
-            <p class="copy text-right max-w-3/10">
+            <p class="copy text-center md:text-right max-w-full md:max-w-3/10">
                 &copy 2026 Taskr. Built for the next generation of African teams in Lagos.
             </p>
         </section>

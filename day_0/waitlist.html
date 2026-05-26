@@ -18,21 +18,21 @@
 
     <title>Join Waitlist | Taskr</title>
 </head>
-<body class="flex flex-col items-center h-screen bg-[#F4F6F8]">
+<body class="flex flex-col items-center min-h-screen bg-[#F4F6F8] px-4 sm:px-6 py-6 sm:py-8">
 
-    <main class="h-8/10 w-full flex justify-center items-center">
-        <div class="card flex flex-col gap-3 items-center bg-[#FFFFFF] w-3/10 p-10">
-            <h2 class="font-bold text-3xl text-[#1A1D20]">Get early access</h2>
-            <p class="text-md text-[#828C95]">Join the Taskr waitlist today.</p>
+    <main class="flex-1 w-full flex justify-center items-center py-8">
+        <div class="card flex flex-col gap-3 items-center bg-[#FFFFFF] w-full max-w-md md:max-w-lg p-6 sm:p-8 md:p-10 rounded-2xl shadow-sm">
+            <h2 class="font-bold text-2xl sm:text-3xl text-[#1A1D20] text-center">Get early access</h2>
+            <p class="text-sm sm:text-md text-[#828C95] text-center">Join the Taskr waitlist today.</p>
 
-            <form action="#" class="flex flex-col gap-5 mt-10 w-full">
+            <form action="#" class="flex flex-col gap-4 sm:gap-5 mt-8 sm:mt-10 w-full">
                 <input type="text" placeholder="Name"
-                class="w-full border border-solid border-[#828C95] px-6 py-3">
+                class="w-full border border-solid border-[#828C95] px-4 sm:px-6 py-3 rounded-xl">
 
                 <input type="email" placeholder="Email"
-                class="w-full border border-solid border-[#828C95] px-6 py-3" >
+                class="w-full border border-solid border-[#828C95] px-4 sm:px-6 py-3 rounded-xl" >
 
-                <select name="size" id="team-size" class="w-full border border-solid border-[#828C95] px-6 py-3">
+                <select name="size" id="team-size" class="w-full border border-solid border-[#828C95] px-4 sm:px-6 py-3 rounded-xl bg-white">
                     <optgroup value="0" disabled>Team Size</optgroup>
                     <option value="1">Team Size</option>
                     <option value="2">2-3</option>
@@ -40,13 +40,13 @@
                     <option value="4">7-50</option>
                 </select>
 
-                <button class="bg-[#0BB778] px-6 py-3 text-white font-semibold">Join waitlist</button>
+                <button class="bg-[#0BB778] px-6 py-3 text-white font-semibold rounded-xl w-full">Join waitlist</button>
             </form>
         </div>
     </main>
 
-    <footer class="h-2/10 w-full flex flex-col gap-3 items-center justify-center">
-        <div class="contact flex gap-10">
+    <footer class="w-full flex flex-col gap-3 items-center justify-center py-6 text-center">
+        <div class="contact flex flex-wrap justify-center gap-6 sm:gap-10">
             <a href="#">X</a>
             <a href="#">Email</a>
         </div>
