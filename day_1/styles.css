@@ -2,4 +2,170 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #F8F9FF;
+}
+
+header {
+    width: 100%;
+    border-bottom: 1px solid #C3C6D7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5em 0;
+}
+
+nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+    gap: 2em;
+    width: 100%;
+}
+
+section {
+    width: 70%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+section.head {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+section.head h3 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+}
+
+section.head p {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 16px;
+}
+
+section.input-section {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    padding: 2em 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.input-section .top {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+section.input-section input {
+    width: 60%;
+    padding: 0 2em;
+    border-radius: 10px;
+    border: 1px solid #6B7280;
+}
+
+section.input-section input::placeholder {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    color: #6B7280;
+}
+
+section.input-section select {
+    width: 20%;
+    padding: 0 2em;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.input-section a {
+    width: 20%;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    padding: 1em 0;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.input-warning {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #4B5563;
+}
+
+.task-nav .left {
+    display: flex;
+    gap: 2em;
+    border: 1px solid #C3C6D7;
+    padding: .5em;
+    border-radius: 10px;
+}
+
+.task-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2em;
+}
+
+.task-nav .left li {
+    background-color: #FFFFFF;
+    padding: 1em 2em;
+    border-radius: 10px;
+}
+
+.task-nav .left .active {
+    background-color: #2563EB;
+    color: #FFFFFF;
+}
+
+.task-body {
+    background-color: #FFFFFF;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+.original {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.original img {
+    height: 30px;
+    width: 30px;
 }

@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- 
+        Link to Inter font
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- 
         Link to CSS
     -->
 
@@ -14,6 +22,62 @@
 </head>
 <body>
     <div class="container">
+
+        <header>
+
+            <!-- navbar -->
+            <nav>
+                <div class="logo">
+                    <h1>Taskr</h1>
+                </div>
+
+                <div class="right">
+                    <img src="./assets/img/User avatar.png" alt="">
+                </div>
+            </nav>
+        </header>
+
+
+        <main>
+            <section class="head">
+                <h3>Taskr</h3>
+                <p>Lightweight task management for fast-moving teams</p>
+            </section>
+
+            <section class="input-section">
+                <div class="top">
+                    <input type="text" placeholder="What needs to be done?">
+                    <select name="priority" id="priority">
+                        <option value="1">Medium Prirority</option>
+                        <option value="1">Low Prirority</option>
+                        <option value="1">High Prirority</option>
+                    </select>
+                    <a href="#">Add Task</a>
+                </div>
+
+                <p class="input-warning">Task title is required</p>
+            </section>
+
+            <section class="task-main">
+                <div class="task-nav">
+                    <ul class="left">
+                        <li>All</li>
+                        <li>Active</li>
+                        <li class="active">Completed</li>
+                    </ul>
+                    <div class="right">
+                        <p><span id="curr-task">0</span> of <span id="total-task">0</span> tasks completed</p>
+                    </div>
+                </div>
+
+                <div class="task-body">
+                    <div class="original">
+                        <img src="./assets/img/tasks.png" alt="">
+                        <p>No tasks yet. Add one above to get started.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
 
     </div>
 
