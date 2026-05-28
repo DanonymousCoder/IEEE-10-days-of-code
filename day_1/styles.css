@@ -129,6 +129,7 @@ section.input-section select {
     font-size: 18px;
     line-height: 18px;
     color: #DC2626;
+    display: none;
 }
 
 .task-nav .left {
@@ -253,4 +254,8 @@ section.input-section select {
     display: flex;
     align-items: center;
     gap: 1em;
+}
+
+.hidden {
+    display: none;
 }
