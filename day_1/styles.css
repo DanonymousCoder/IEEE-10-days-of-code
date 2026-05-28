@@ -167,14 +167,15 @@ section.input-section select {
     gap: 1em;
     justify-content: center;
     align-items: center;
-    height: 250px;
 }
 
 .original {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 1em;
+    height: 250px;
 }
 
 .original img {
@@ -187,9 +188,14 @@ section.input-section select {
     background: transparent;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     width: 100%;
-    gap: 1em;
-    margin-top: 10em;
+    gap: 3em;
+    height: auto;
+}
+
+.tasks-section .top {
+    width: 100%;
 }
 
 .task {
@@ -244,8 +250,8 @@ section.input-section select {
     color: #6B7280;
 }
 
-#task-3 .task-name, 
-#task-4 .task-name {
+.bottom .task-name, 
+.bottom .task-name {
     text-decoration: line-through;
 }
 
