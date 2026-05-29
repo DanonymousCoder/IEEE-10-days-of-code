@@ -228,6 +228,7 @@ section.input-section select {
     font-size: 11px;
     font-weight: 600;
     border: none;
+    text-transform: capitalize;
 }
 
 .medium {
@@ -238,6 +239,7 @@ section.input-section select {
     border: none;
     background-color: #FEF3C7;
     color: #D97706;
+    text-transform: capitalize;
 }
 
 .low {
@@ -248,6 +250,7 @@ section.input-section select {
     border: none;
     background-color: #F3F4F6;
     color: #6B7280;
+    text-transform: capitalize;
 }
 
 .bottom .task-name, 

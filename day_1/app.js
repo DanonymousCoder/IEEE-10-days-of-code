@@ -17,6 +17,9 @@ const task_complete = document.querySelector(".tasks-section .bottom")
 
 const task_display = document.querySelectorAll(".t-body");
 
+const markedDone = document.getElementById("markDone")
+const deleteTask = document.getElementById("deleteTask") 
+
 filtBtns.forEach(filtBtn => {
 
     filtBtn.addEventListener('click', () => {
@@ -32,7 +35,6 @@ submitTask.addEventListener("click", () => {
     } else {
         inputWarning.style.display = 'none';
         createTask(taskName.value)
-        displayTasks()
         clearInput()
     }
 })
@@ -95,10 +97,11 @@ function createTask(title) {
 
     console.log(new_obj)
     tasksCreated.push(new_obj)
+    displayTasks(new_obj)
     count++
 }
 
-function displayTasks() {
+function displayTasks(obj) {
     task_display.forEach(element => {
         if (!(element.classList.contains("hidden"))) {
             element.classList.add("hidden")
@@ -107,32 +110,30 @@ function displayTasks() {
 
     taskSection.classList.remove("hidden")
     document.querySelector(".task-body").style.backgroundColor = '#F8F9FF'
-
-    tasksCreated.forEach(element => {
+    
     let task = document.createElement('div')
     task.className = 'task'
     task.id = `task-${count}`
     task.innerHTML = `
     <div class="left">
         <p class="task-name">
-            ${element.title}
+            ${obj.title}
         </p>
 
-        <p class="high">
-             ${element.priority}
+        <p class="${(obj.priority)}">
+             ${obj.priority}
         </p>
     </div>
 
     <div class="right">
-        <img src="./assets/img/done.png" alt="">
-        <img src="./assets/img/delete.png" alt="">
+        <img src="./assets/img/done.png" alt="checkmark icon" id="markDone">
+        <img src="./assets/img/delete.png" alt="delete icon" id="deleteTask">
     </div>
     `
 
     // task_uncomplete.insertAdjacentElement('beforeend', task)
     console.log(task)
     task_uncomplete.insertAdjacentElement('beforeend', task)
-})
 }
 
 let count = 0
