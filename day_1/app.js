@@ -75,7 +75,7 @@ task_uncomplete.addEventListener('click', (event) => {
             event.target.src = './assets/img/done.png'
         }
     } else if (event.target.classList.contains('deleteTask')) {
-        console.log(event.target.id)
+        deleteTasks(event.target.id)
         // displayTasks()
     }
 })
@@ -108,7 +108,7 @@ function createTask(title) {
     console.log(new_obj)
     tasksCreated.push(new_obj)
     displayTasks()
-    count++
+    // count++
 }
 
 function addTask(obj) {
@@ -145,7 +145,7 @@ function displayTasks() {
 
                 <div class="right">
                     <img src="./assets/img/done.png" alt="checkmark icon" class ="markedDone">
-                    <img src="./assets/img/delete.png" alt="delete icon" class ="deleteTask">
+                    <img src="./assets/img/delete.png" alt="delete icon" class ="deleteTask" id='${index}'>
                 </div>
             </div>
         `
@@ -158,8 +158,16 @@ function displayTasks() {
    
 }
 
-let count = 0
+// let count = 0
 
+
+function deleteTasks(index) {
+    // console.log(index)
+    if (index == 0) tasksCreated.shift()
+    else tasksCreated.splice(0, index)
+
+    displayTasks()
+}
 
 
 function clearInput() {
