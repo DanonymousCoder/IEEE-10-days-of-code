@@ -17,9 +17,6 @@ const task_complete = document.querySelector(".tasks-section .bottom")
 
 const task_display = document.querySelectorAll(".t-body");
 
-const markedDone = document.getElementById("markDone")
-const deleteTask = document.getElementById("deleteTask") 
-
 filtBtns.forEach(filtBtn => {
 
     filtBtn.addEventListener('click', () => {
@@ -70,6 +67,19 @@ active_tasks.addEventListener('click', () => {
     default_body.classList.remove('hidden')
 })
 
+task_uncomplete.addEventListener('click', (event) => {
+    if (event.target.classList.contains('markedDone')) {
+        if (event.target.src.includes('done.png')) {
+            event.target.src = './assets/img/redo.png'
+        } else {
+            event.target.src = './assets/img/done.png'
+        }
+    } else if (event.target.classList.contains('deleteTask')) {
+        console.log(event.target.id)
+        // displayTasks()
+    }
+})
+
 
 
 const tasksCreated = [
@@ -97,11 +107,19 @@ function createTask(title) {
 
     console.log(new_obj)
     tasksCreated.push(new_obj)
-    displayTasks(new_obj)
+    displayTasks()
     count++
 }
 
-function displayTasks(obj) {
+function addTask(obj) {
+    tasksCreated.push(obj)
+
+    displayTasks();
+}
+
+let objCount = 0
+
+function displayTasks() {
     task_display.forEach(element => {
         if (!(element.classList.contains("hidden"))) {
             element.classList.add("hidden")
@@ -111,29 +129,33 @@ function displayTasks(obj) {
     taskSection.classList.remove("hidden")
     document.querySelector(".task-body").style.backgroundColor = '#F8F9FF'
     
-    let task = document.createElement('div')
-    task.className = 'task'
-    task.id = `task-${count}`
-    task.innerHTML = `
-    <div class="left">
-        <p class="task-name">
-            ${obj.title}
-        </p>
+    task_uncomplete.innerHTML = tasksCreated.map((eachObj, index) => {
+        let task = document.createElement('div')
+        return `
+            <div class='task' id='${index}'>
+                <div class="left">
+                    <p class="task-name">
+                        ${eachObj.title}
+                    </p>
 
-        <p class="${(obj.priority)}">
-             ${obj.priority}
-        </p>
-    </div>
+                    <p class="${(eachObj.priority)}">
+                        ${eachObj.priority}
+                    </p>
+                </div>
 
-    <div class="right">
-        <img src="./assets/img/done.png" alt="checkmark icon" id="markDone">
-        <img src="./assets/img/delete.png" alt="delete icon" id="deleteTask">
-    </div>
-    `
+                <div class="right">
+                    <img src="./assets/img/done.png" alt="checkmark icon" class ="markedDone">
+                    <img src="./assets/img/delete.png" alt="delete icon" class ="deleteTask">
+                </div>
+            </div>
+        `
 
-    // task_uncomplete.insertAdjacentElement('beforeend', task)
-    console.log(task)
-    task_uncomplete.insertAdjacentElement('beforeend', task)
+         // task_uncomplete.insertAdjacentElement('beforeend', task)
+        // console.log(task)
+        // task_uncomplete.insertAdjacentElement('beforeend', task)
+    }).join(' ')
+
+   
 }
 
 let count = 0
