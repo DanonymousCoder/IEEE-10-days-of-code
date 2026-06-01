@@ -253,7 +253,6 @@ section.input-section select {
     text-transform: capitalize;
 }
 
-.bottom .task-name, 
 .bottom .task-name {
     text-decoration: line-through;
 }

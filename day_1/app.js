@@ -71,11 +71,32 @@ task_uncomplete.addEventListener('click', (event) => {
     if (event.target.classList.contains('markedDone')) {
         if (event.target.src.includes('done.png')) {
             event.target.src = './assets/img/redo.png'
+            markComplete(event.target.dataset.id)
+            console.log(event.target.dataset.id)
+            // console.log((event.target.id))
         } else {
             event.target.src = './assets/img/done.png'
+            redoTask(event.target.dataset.id)
         }
     } else if (event.target.classList.contains('deleteTask')) {
-        deleteTasks(event.target.id)
+        deleteTasks(event.target.dataset.id)
+        // displayTasks()
+    }
+})
+
+task_complete.addEventListener('click', (event) => {
+    if (event.target.classList.contains('markedDone')) {
+        if (event.target.src.includes('done.png')) {
+            event.target.src = './assets/img/redo.png'
+            markComplete(event.target.dataset.id)
+            console.log(event.target.dataset.id)
+            // console.log((event.target.id))
+        } else {
+            event.target.src = './assets/img/done.png'
+            redoTask(event.target.dataset.id)
+        }
+    } else if (event.target.classList.contains('deleteTask')) {
+        deleteTasks(event.target.dataset.id)
         // displayTasks()
     }
 })
@@ -120,6 +141,7 @@ function addTask(obj) {
 let objCount = 0
 
 function displayTasks() {
+
     task_display.forEach(element => {
         if (!(element.classList.contains("hidden"))) {
             element.classList.add("hidden")
@@ -129,43 +151,92 @@ function displayTasks() {
     taskSection.classList.remove("hidden")
     document.querySelector(".task-body").style.backgroundColor = '#F8F9FF'
     
-    task_uncomplete.innerHTML = tasksCreated.map((eachObj, index) => {
-        let task = document.createElement('div')
-        return `
-            <div class='task' id='${index}'>
-                <div class="left">
-                    <p class="task-name">
-                        ${eachObj.title}
-                    </p>
+    task_uncomplete.innerHTML = tasksCreated
+    .filter(eachObj => !eachObj.isCompleted)
+    .map((eachObj) => {
+            // let task = document.createElement('div')
+            return `
+                <div class='task' data-id='${eachObj.id}'>
+                    <div class="left">
+                        <p class="task-name">
+                            ${eachObj.title}
+                        </p>
 
-                    <p class="${(eachObj.priority)}">
-                        ${eachObj.priority}
-                    </p>
-                </div>
+                        <p class="${(eachObj.priority)}">
+                            ${eachObj.priority}
+                        </p>
+                    </div>
 
-                <div class="right">
-                    <img src="./assets/img/done.png" alt="checkmark icon" class ="markedDone">
-                    <img src="./assets/img/delete.png" alt="delete icon" class ="deleteTask" id='${index}'>
+                    <div class="right">
+                        <img src="./assets/img/done.png" alt="checkmark icon" class ="markedDone" data-id='${eachObj.id}'>
+                        <img src="./assets/img/delete.png" alt="delete icon" class ="deleteTask" data-id='${eachObj.id}'>
+                    </div>
                 </div>
-            </div>
-        `
+            `
 
          // task_uncomplete.insertAdjacentElement('beforeend', task)
         // console.log(task)
         // task_uncomplete.insertAdjacentElement('beforeend', task)
     }).join(' ')
 
-   
+   task_complete.innerHTML = tasksCreated
+   .filter(eachObj => eachObj.isCompleted)
+   .map((eachObj) => {
+        return `
+                <div class='task' data-id='${eachObj.id}'>
+                    <div class="left">
+                        <p class="task-name">
+                            ${eachObj.title}
+                        </p>
+
+                        <p class="${(eachObj.priority)}">
+                            ${eachObj.priority}
+                        </p>
+                    </div>
+
+                    <div class="right">
+                        <img src="./assets/img/redo.png" alt="checkmark icon" class="markedDone" data-id='${eachObj.id}'>
+                        <img src="./assets/img/delete.png" alt="delete icon" class="deleteTask" data-id='${eachObj.id}'>
+                    </div>
+                </div>
+        `
+   }).join('')
+
+
+
+    if (tasksCreated.length == 0) {
+        console.log('Seen')
+        task_display.forEach(element => {
+        if (!(element.classList.contains('hidden'))) {
+            element.classList.add('hidden')
+        }
+    })
+
+    default_body.classList.remove('hidden')
+    document.querySelector('.task-body').style.backgroundColor = '#FFFFFF'
+    }
 }
 
 // let count = 0
 
 
-function deleteTasks(index) {
-    // console.log(index)
-    if (index == 0) tasksCreated.shift()
-    else tasksCreated.splice(0, index)
+function deleteTasks(id) {
+    let index = tasksCreated.findIndex(obj => obj.id === id)
 
+    if (index !== -1) tasksCreated.splice(index, 1)
+
+    displayTasks()
+}
+
+function markComplete(id) {
+    const task = tasksCreated.find(obj => obj.id === id)
+    if (task) task.isCompleted = true
+    displayTasks()
+}
+
+function redoTask(id) {
+    const task = tasksCreated.find(obj => obj.id === id)
+    if (task) task.isCompleted = false
     displayTasks()
 }
 
