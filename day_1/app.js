@@ -44,7 +44,9 @@ completed_tasks.addEventListener('click', () => {
         }
     })
 
+    document.querySelector('.task-body').style.backgroundColor = '#FFFFFF'
     default_completed.classList.remove('hidden')
+    displayCompletedTasks()
 })
 
 all_tasks.addEventListener('click', () => {
@@ -55,6 +57,7 @@ all_tasks.addEventListener('click', () => {
     })
 
     default_body.classList.remove('hidden')
+    displayTasks()
 })
 
 active_tasks.addEventListener('click', () => {
@@ -64,7 +67,9 @@ active_tasks.addEventListener('click', () => {
         }
     })
 
+    document.querySelector('.task-body').style.backgroundColor = '#FFFFF'
     default_body.classList.remove('hidden')
+    displayActiveTasks()
 })
 
 task_uncomplete.addEventListener('click', (event) => {
@@ -207,13 +212,96 @@ function displayTasks() {
     if (tasksCreated.length == 0) {
         console.log('Seen')
         task_display.forEach(element => {
-        if (!(element.classList.contains('hidden'))) {
-            element.classList.add('hidden')
-        }
-    })
+            if (!(element.classList.contains('hidden'))) {
+                element.classList.add('hidden')
+            }
+        })
 
-    default_body.classList.remove('hidden')
-    document.querySelector('.task-body').style.backgroundColor = '#FFFFFF'
+        default_body.classList.remove('hidden')
+        document.querySelector('.task-body').style.backgroundColor = '#FFFFFF'
+    }
+}
+
+function displayActiveTasks() {
+    const activeTasksList = tasksCreated.filter(eachObj => eachObj.isCompleted === false)
+    if (activeTasksList.length) {
+        task_display.forEach(element => {
+            if (!(element.classList.contains('hidden'))) {
+                element.classList.add('hidden')
+            }
+        })
+
+        taskSection.classList.remove('hidden')
+        document.querySelector('.task-body').style.backgroundColor = '#F8F9FF'
+
+        task_uncomplete.innerHTML = tasksCreated
+        .filter(eachObj => !eachObj.isCompleted)
+        .map((eachObj) => {
+                // let task = document.createElement('div')
+                return `
+                    <div class='task' data-id='${eachObj.id}'>
+                        <div class="left">
+                            <p class="task-name">
+                                ${eachObj.title}
+                            </p>
+
+                            <p class="${(eachObj.priority)}">
+                                ${eachObj.priority}
+                            </p>
+                        </div>
+
+                        <div class="right">
+                            <img src="./assets/img/done.png" alt="checkmark icon" class ="markedDone" data-id='${eachObj.id}'>
+                            <img src="./assets/img/delete.png" alt="delete icon" class ="deleteTask" data-id='${eachObj.id}'>
+                        </div>
+                    </div>
+                `
+
+            // task_uncomplete.insertAdjacentElement('beforeend', task)
+            // console.log(task)
+            // task_uncomplete.insertAdjacentElement('beforeend', task)
+        }).join(' ')
+
+        task_complete.innerHTML = ``;
+    }
+}
+
+function displayCompletedTasks() {
+    const completedTasksList = tasksCreated.filter(eachObj => eachObj.isCompleted === true)
+    if (completedTasksList.length) {
+        task_display.forEach(element => {
+            if (!(element.classList.contains('hidden'))) {
+                element.classList.add('hidden')
+            }
+        })
+
+        taskSection.classList.remove('hidden')
+        document.querySelector('.task-body').style.backgroundColor = '#F8F9FF'
+
+         task_complete.innerHTML = tasksCreated
+        .filter(eachObj => eachObj.isCompleted)
+        .map((eachObj) => {
+                return `
+                        <div class='task' data-id='${eachObj.id}'>
+                            <div class="left">
+                                <p class="task-name">
+                                    ${eachObj.title}
+                                </p>
+
+                                <p class="${(eachObj.priority)}">
+                                    ${eachObj.priority}
+                                </p>
+                            </div>
+
+                            <div class="right">
+                                <img src="./assets/img/redo.png" alt="checkmark icon" class="markedDone" data-id='${eachObj.id}'>
+                                <img src="./assets/img/delete.png" alt="delete icon" class="deleteTask" data-id='${eachObj.id}'>
+                            </div>
+                        </div>
+                `
+        }).join('')
+
+        task_uncomplete.innerHTML = ``;
     }
 }
 
