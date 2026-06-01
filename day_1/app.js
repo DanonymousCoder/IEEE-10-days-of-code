@@ -45,6 +45,7 @@ completed_tasks.addEventListener('click', () => {
     })
 
     document.querySelector('.task-body').style.backgroundColor = '#FFFFFF'
+    default_body.classList.add('hidden')
     default_completed.classList.remove('hidden')
     displayCompletedTasks()
 })
@@ -56,6 +57,7 @@ all_tasks.addEventListener('click', () => {
         }
     })
 
+    default_completed.classList.add('hidden')
     default_body.classList.remove('hidden')
     displayTasks()
 })
@@ -68,6 +70,7 @@ active_tasks.addEventListener('click', () => {
     })
 
     document.querySelector('.task-body').style.backgroundColor = '#FFFFF'
+    default_completed.classList.add('hidden')
     default_body.classList.remove('hidden')
     displayActiveTasks()
 })
@@ -175,6 +178,7 @@ function displayTasks() {
         document.querySelector(".task-body").style.backgroundColor = '#F8F9FF'
 
         default_body.classList.add('hidden')
+        default_completed.classList.add('hidden')
 
         task_uncomplete.innerHTML = tasksCreated
         .filter(eachObj => !eachObj.isCompleted)
@@ -224,6 +228,7 @@ function displayTasks() {
 
     } else {
         taskSection.classList.add('hidden')
+        default_completed.classList.add('hidden')
         default_body.classList.remove('hidden')
         document.querySelector('.task-body').style.backgroundColor = '#FFFFFF'
     }
@@ -244,6 +249,7 @@ function displayActiveTasks() {
         taskSection.classList.remove('hidden')
         document.querySelector('.task-body').style.backgroundColor = '#F8F9FF'
 
+        default_completed.classList.add('hidden')
         task_uncomplete.innerHTML = activeTasksList
         .map((eachObj) => {
                 return `
@@ -267,6 +273,7 @@ function displayActiveTasks() {
         }).join('')
     } else {
         taskSection.classList.add('hidden')
+        default_completed.classList.add('hidden')
         default_body.classList.remove('hidden')
         document.querySelector('.task-body').style.backgroundColor = '#FFFFFF'
     }
@@ -287,6 +294,7 @@ function displayCompletedTasks() {
         taskSection.classList.remove('hidden')
         document.querySelector('.task-body').style.backgroundColor = '#F8F9FF'
 
+        default_body.classList.add('hidden')
         task_complete.innerHTML = completedTasksList
         .map((eachObj) => {
                 return `

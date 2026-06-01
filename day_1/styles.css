@@ -175,7 +175,9 @@ section.input-section select {
     align-items: center;
     justify-content: center;
     gap: 1em;
-    height: 250px;
+    min-height: 250px;
+    width: 100%;
+    text-align: center;
 }
 
 .original img {
@@ -257,6 +259,18 @@ section.input-section select {
     text-decoration: line-through;
 }
 
+/* Ensure empty-state views are centered and responsive */
+.t-body.no-completed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 250px;
+    width: 100%;
+    gap: 1em;
+}
+
 
 .task .right {
     display: flex;
@@ -266,4 +280,181 @@ section.input-section select {
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        width: 90%;
+    }
+
+    section {
+        width: 88%;
+    }
+
+    section.input-section {
+        padding: 1.5em 2em;
+    }
+
+    section.input-section input::placeholder {
+        font-size: 18px;
+    }
+
+    .task-nav {
+        gap: 1rem;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-nav .right {
+        align-self: center;
+        padding-top: 1em;
+    }
+
+    .task {
+        padding: 1.5em 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 3em;
+        gap: 1.5em;
+    }
+
+    section.head h3 {
+        font-size: 26px;
+    }
+
+    section.head p {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    section.input-section {
+        padding: 1.25em;
+    }
+
+    .input-section .top {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    section.input-section input,
+    section.input-section select,
+    .input-section a {
+        width: 100%;
+    }
+
+    .task-nav .left {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: .75rem;
+    }
+
+    .task-nav .left li {
+        padding: .85em 1.2em;
+        flex: 1 1 30%;
+        text-align: center;
+    }
+
+    .task-nav .right {
+        align-self: center;
+    }
+
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .task .left {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .task .right {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 0;
+    }
+
+    nav {
+        width: 92%;
+        align-items: center;
+    }
+
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    main {
+        margin-top: 2rem;
+    }
+
+    section {
+        width: 92%;
+    }
+
+    section.head {
+        gap: .75rem;
+    }
+
+    section.head h3 {
+        font-size: 22px;
+    }
+
+    section.head p {
+        font-size: 16px;
+    }
+
+    section.input-section {
+        margin-top: 24px;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    section.input-section input,
+    section.input-section select,
+    .input-section a {
+        min-height: 48px;
+        font-size: 16px;
+    }
+
+    .input-section a {
+        padding: .9em 0;
+    }
+
+    .task-nav .left li {
+        flex: 1 1 100%;
+    }
+
+    .task-nav .right p {
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .task {
+        padding: 1rem;
+    }
+
+    .task .left {
+        gap: .75rem;
+    }
+
+    .task-name {
+        font-size: 15px;
+    }
+
+    .high,
+    .medium,
+    .low {
+        padding: .8em 1em;
+    }
 }
