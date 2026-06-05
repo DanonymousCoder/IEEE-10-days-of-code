@@ -1,7 +1,9 @@
+import AboutBio from '../components/AboutBio.jsx'
+
 function About() {
     return (
         <div className="container">
-            <h1>About</h1>
+            <AboutBio />
         </div>
     )
 }

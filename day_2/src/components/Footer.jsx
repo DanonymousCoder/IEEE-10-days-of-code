@@ -9,12 +9,16 @@ function Footer() {
     return (
         <>
             <footer>
-                <p className="left">© 2024 Software Engineer. Built with Precision.</p>
+                <p className="left">© 2026 Software Engineer. Built with Precision.</p>
 
                 <ul className="footer-links">
-                    {footerLinks.map(elem => {
-                        <li><a href={elem.link}>{elem.name}</a></li>
-                    })}
+                    {footerLinks.map(elem => (
+                        <li key={elem.name}>
+                            <a href={elem.link} target="_blank" rel="noopener noreferrer">
+                                {elem.name}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </footer>
         </>

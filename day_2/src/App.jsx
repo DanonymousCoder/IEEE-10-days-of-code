@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import About from './pages/About'
 import Projects from './pages/Projects'
@@ -9,7 +8,6 @@ import Footer from './components/Footer'
 import './index.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className='container'>
