@@ -1,0 +1,24 @@
+function Footer() {
+
+    const footerLinks = [
+        {'name': 'GitHub', 'link': ''},
+        {'name': 'LinkedIn', 'link': ''},
+        {'name': 'Twitter', 'link': ''}
+    ]
+
+    return (
+        <>
+            <footer>
+                <p className="left">© 2024 Software Engineer. Built with Precision.</p>
+
+                <ul className="footer-links">
+                    {footerLinks.map(elem => {
+                        <li><a href={elem.link}>{elem.name}</a></li>
+                    })}
+                </ul>
+            </footer>
+        </>
+    )
+}
+
+export default Footer;

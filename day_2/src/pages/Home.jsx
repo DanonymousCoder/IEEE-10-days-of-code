@@ -1,9 +1,10 @@
-function About() {
+function Home() {
+
     return (
         <div className="container">
-            <h1>About</h1>
+            <h1>Home</h1>
         </div>
     )
 }
 
-export default About;
+export default Home;
