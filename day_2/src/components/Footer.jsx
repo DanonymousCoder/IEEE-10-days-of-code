@@ -9,7 +9,10 @@ function Footer() {
     return (
         <>
             <footer>
-                <p className="left">© 2026 Software Engineer. Built with Precision.</p>
+                <hr />
+                <div className="left">
+                    <p>© 2026 Software Engineer. Built with Precision.</p>
+                </div>
 
                 <ul className="footer-links">
                     {footerLinks.map(elem => (

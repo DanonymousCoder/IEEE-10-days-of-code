@@ -55,36 +55,119 @@ footer {
 .hero {
   color: #C2C6D6;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 80%;
-  margin: 4em 0;
+  margin: 6em 0;
   gap: 2em;
 }
 
-.hero h6 {
-  text-transform: uppercase;
-  color: #ADC6FF;
-  line-height: 21px;
+.hero .top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
 }
 
-.hero h2 {
-  font-weight: 600;
-  font-size: 48px;
+.hero .top p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.hero h1 {
+  font-weight: 700;
+  font-size: 44px;
+  color: #E5E2E1;
+  font-family: 'Geist', sans-serif;
+}
+
+.hero h1 span {
+  color: #ADC6FF;
 }
 
 .hero .right {
   display: flex;
   flex-direction: column;
   gap: 2em;
+  height: 100%;
+}
+
+.hero img {
+  height: 100%;
+}
+
+.hero button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25.6px;
+  text-align: center;
+  background: none;
+  background-color: #ADC6FF;
+  color: #002E6A;
+  padding: 1em 2em;
+}
+
+.hero button .no-bg {
+  color: #E5E2E1;
+  background: transparent;
+}
+
+footer {
+  display: grid;
+  grid-template-areas: 
+  'line line line line line line line line'
+  '. left  left left right right right .';
+  width: 100%;
 }
 
 footer ul {
   display: flex;
   gap: 1em;
   list-style: none;
+  grid-area: right;
+  justify-content: flex-end;
+}
+
+.skills-head {
+  color: #E5E2E1;
+  font-family: Geist;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 57.6px;
+  letter-spacing: -0.96px;
+}
+
+.skill-cards {
+  background-color: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  background-color: #0E0E0E;
+  display: flex;
+  padding: 1em;
+  border: 1px solid #1C1B1B;
+}
+
+.skill-name {
+  color: #E5E2E1;
+}
+
+.skill-level {
+  color: #C2C6D6;
 }
 
 footer p,
 footer li {
   color: #C2C6D6;
+}
+
+footer .left {
+  grid-area: left;
+}
+
+footer hr {
+  grid-area: line;
+  margin-bottom: 2em;
 }

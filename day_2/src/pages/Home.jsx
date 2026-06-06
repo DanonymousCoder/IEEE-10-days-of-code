@@ -1,12 +1,13 @@
 import '../index.css'
 import HeroSection from '../components/HeroSection'
+import SkillsPreview from '../components/SkillsPreview';
 
 function Home() {
 
     return (
         <div className="container">
-            <h1>Test</h1>
             <HeroSection />
+            <SkillsPreview />
         </div>
     )
 }

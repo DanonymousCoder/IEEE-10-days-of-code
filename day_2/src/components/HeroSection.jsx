@@ -1,4 +1,5 @@
 import '../index.css'
+import goatedMe from '../assets/goated_me.jpg'
 
 function HeroSection() {
 
@@ -6,12 +7,15 @@ function HeroSection() {
         <div className="hero">
 
             <div className="right">
-                <div className="top">
-                    <h6>About me</h6>
-                    <h2>Software Developer</h2>
-                </div>
         
-                <div className="bottom">
+                <div className="top">
+                    <h1 className="hd">
+                        Building the
+                        future of the
+                        web, <span>one
+                        commit at a
+                        time.</span>
+                    </h1>
                     <p>
                                 I am a Software Engineer specializing in the architecture of high-performance,
                                 distributed systems. My journey in technology is driven by a profound obsession with
@@ -19,6 +23,11 @@ function HeroSection() {
                                 experience navigating complex software ecosystems, I've dedicated my career to
                                 building resilient backends that scale horizontally without compromising on latency.
                     </p>
+                </div>
+
+                <div className="bottom">
+                    <button>View Projects</button>
+                    <button className='no-bg'>Contact Me</button>
                 </div>
             </div>
 
