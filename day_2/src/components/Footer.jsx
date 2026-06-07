@@ -1,18 +1,15 @@
 function Footer() {
 
     const footerLinks = [
-        {'name': 'GitHub', 'link': ''},
-        {'name': 'LinkedIn', 'link': ''},
-        {'name': 'Twitter', 'link': ''}
+        { 'name': 'GitHub', 'link': '' },
+        { 'name': 'LinkedIn', 'link': '' },
+        { 'name': 'Twitter', 'link': '' }
     ]
 
     return (
         <>
             <footer>
-                <hr />
-                <div className="left">
-                    <p>© 2026 Software Engineer. Built with Precision.</p>
-                </div>
+                <p className="left">© 2024 Software Engineer. Built with Precision.</p>
 
                 <ul className="footer-links">
                     {footerLinks.map(elem => (
@@ -27,5 +24,6 @@ function Footer() {
         </>
     )
 }
+
 
 export default Footer;

@@ -1,15 +1,15 @@
+import { AboutBio } from '../components/AboutBio.jsx'
 import '../index.css'
-import HeroSection from '../components/HeroSection'
-import SkillsPreview from '../components/SkillsPreview';
 
 function Home() {
 
     return (
         <div className="container">
-            <HeroSection />
-            <SkillsPreview />
+            <AboutBio />
         </div>
     )
 }
+
+export default Home;
 
 export default Home;

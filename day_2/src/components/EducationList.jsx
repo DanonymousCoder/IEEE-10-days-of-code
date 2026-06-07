@@ -44,7 +44,7 @@ function EducationList() {
                         </div>
                     ))
                 }
-                
+
             </div>
         </section>
     )

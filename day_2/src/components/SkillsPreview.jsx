@@ -4,9 +4,9 @@ import '../index.css'
 
 
 const technicalArsenal = [
-    {'name': 'JavaScript', 'level': 'intermediate'},
-    {'name': 'Python', 'level': 'Intermediate'},
-    {'name': 'Java', 'level': 'Beginner'}
+    { 'name': 'JavaScript', 'level': 'intermediate' },
+    { 'name': 'Python', 'level': 'Intermediate' },
+    { 'name': 'Java', 'level': 'Beginner' }
 ]
 
 function SkillsPreview() {
@@ -19,14 +19,14 @@ function SkillsPreview() {
 
             <div className="skill-cards">
                 {technicalArsenal.map((elem, index) => (
-                    <div className="skill-card" key={index} id={index}>
+                    <div className="skill-card" id={index}>
                         <p className="skill-name">{elem.name}</p>
                         <p className="skill-level">{elem.level}</p>
                     </div>
                 ))}
             </div>
 
-            
+
         </div>
     )
 }
