@@ -18,12 +18,12 @@ function SkillsPreview() {
             </h1>
 
             <div className="skill-cards">
-                {technicalArsenal.map((elem, index) => {
-                    <div className="skill-card" id={index}>
+                {technicalArsenal.map((elem, index) => (
+                    <div className="skill-card" key={index} id={index}>
                         <p className="skill-name">{elem.name}</p>
                         <p className="skill-level">{elem.level}</p>
                     </div>
-                })}
+                ))}
             </div>
 
             

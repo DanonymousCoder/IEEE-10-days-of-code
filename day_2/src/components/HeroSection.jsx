@@ -26,8 +26,8 @@ function HeroSection() {
                 </div>
 
                 <div className="bottom">
-                    <button>View Projects</button>
-                    <button className='no-bg'>Contact Me</button>
+                    <a href='/projects'>View Projects</a>
+                    <a className='no-bg' href='/contact'>Contact Me</a>
                 </div>
             </div>
 

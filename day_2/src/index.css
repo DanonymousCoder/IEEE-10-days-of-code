@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+section {
+  width: 80%;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -70,7 +74,7 @@ footer {
 .hero .top p {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .hero h1 {
@@ -95,7 +99,12 @@ footer {
   height: 100%;
 }
 
-.hero button {
+.hero .bottom {
+  display: flex;
+  gap: 1em;
+}
+
+.hero a {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -107,9 +116,143 @@ footer {
   padding: 1em 2em;
 }
 
-.hero button .no-bg {
+.hero a.no-bg {
   color: #E5E2E1;
-  background: transparent;
+  background-color: transparent;
+  border: 1px solid #424754;
+}
+
+div.about {
+  color: #C2C6D6;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 6em 0;
+  gap: 2em;
+}
+
+.about .top {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.about .bottom p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.about h2 {
+  font-weight: 700;
+  font-size: 44px;
+  color: #E5E2E1;
+  font-family: 'Geist', sans-serif;
+}
+
+.about .right {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  height: 100%;
+}
+
+.about img {
+  height: 100%;
+}
+
+.about h6 {
+  text-transform: uppercase;
+  color: #ADC6FF;
+  font-size: 18px;
+}
+
+.education-section h1 {
+  color: #E5E2E1;
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+}
+
+.education-section hr {
+  border: 1px solid #ADC6FF;
+  margin-top: 1em;
+  width: 10%;
+}
+
+.education-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.school-card {
+  background-color: #1C1B1B;
+  border: 1px solid #424754;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 2em;
+}
+
+.school-card .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.school-card .from {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  align-items: flex-start;
+}
+
+.school-card .uni {
+  color: #FFFFFF;
+  font-family: 'Geist', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33.6px;
+}
+
+.school-card .duration {
+  background-color: #2A2A2A;
+  color: #C2C6D6;
+  padding: .5em 1em;
+}
+
+.school-card .degree {
+  color: #ADC6FF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+.school-card .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+p.about {
+  color: #C2C6D6;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.courseworks {
+  display: flex;
+  gap: 1em;
+}
+
+.coursework {
+  background-color: #201F1F;
+  color: #C2C6D6;
+  border: 1px solid #424754;
+  padding: 1em 2em;
+  text-align: center;
 }
 
 footer {
@@ -128,25 +271,35 @@ footer ul {
   justify-content: flex-end;
 }
 
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2em;
+  width: 80%;
+}
+
 .skills-head {
   color: #E5E2E1;
-  font-family: Geist;
+  font-family: 'Geist', sans-serif;
   font-weight: 600;
   font-size: 48px;
   line-height: 57.6px;
   letter-spacing: -0.96px;
+  text-align: left;
 }
 
 .skill-cards {
-  background-color: #FFFFFF;
   display: flex;
+  gap: 1.5em;
   flex-wrap: wrap;
 }
 
 .skill-card {
   background-color: #0E0E0E;
   display: flex;
-  padding: 1em;
+  gap: 5em;
+  padding: 1em 2em;
   border: 1px solid #1C1B1B;
 }
 
@@ -169,5 +322,6 @@ footer .left {
 
 footer hr {
   grid-area: line;
-  margin-bottom: 2em;
+  margin: 2em 0;
+  margin-top: 4em;
 }
