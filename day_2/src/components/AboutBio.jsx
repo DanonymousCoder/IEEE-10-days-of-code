@@ -1,10 +1,10 @@
 import '../index.css'
-import goatedMe from '"../assets/goated_me.jpg"'
+import goatedMe from "../assets/goated_me.jpg"
 
 function AboutBio() {
 
     return (
-        <div className="hero">
+        <div className="about">
             <div className="left">
                 <img src={goatedMe} alt="Goated me" />
             </div>

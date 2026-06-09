@@ -311,6 +311,104 @@ footer ul {
   color: #C2C6D6;
 }
 
+.contact-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  margin-top: 6em;
+}
+
+.contact-section h2 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 57.6px;
+  letter-spacing: -0.96px;
+  color: #E5E2E1;
+}
+
+.contact-head p {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 28.8px;
+  color: #C2C6D6;
+}
+
+.contact-section form {
+  background-color: #0E0E0E;
+  border: 1px solid #424754;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 2em;
+}
+
+form .user-details {
+  display: flex;
+  gap: 2em;
+}
+
+.name,
+.email {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.contact-section form label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.28px;
+  color: #C2C6D6;
+}
+
+.contact-section form input {
+  padding: 1em 2em;
+  background-color: #050505;
+  border: 1px solid #424754;
+}
+
+.contact-section form input::placeholder {
+  color: #8C909F66;
+  font-family: 'Inter', sans-serif;
+}
+
+.message,
+.subject {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.message textarea {
+  height: 350px;
+  padding: 2em;
+  background-color: #050505;
+  border: 1px solid #424754;
+}
+
+.message textarea::placeholder {
+  color: #8C909F66;
+  font-family: 'Inter', sans-serif;
+}
+
+form button {
+  background-color: #ADC6FF;
+  color: #00285D;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.28px;
+  text-align: center;
+  padding: 2em 0;
+}
+
 footer p,
 footer li {
   color: #C2C6D6;
@@ -320,8 +418,8 @@ footer .left {
   grid-area: left;
 }
 
-footer hr {
-  grid-area: line;
+.footer-hr {
+  width: 100%;
   margin: 2em 0;
-  margin-top: 4em;
+  margin-top: 6em;
 }

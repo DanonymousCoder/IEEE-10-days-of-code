@@ -8,6 +8,7 @@ function Footer() {
 
     return (
         <>
+            <hr className="footer-hr" />
             <footer>
                 <p className="left">© 2024 Software Engineer. Built with Precision.</p>
 
