@@ -409,6 +409,136 @@ form button {
   padding: 2em 0;
 }
 
+
+.project-head {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-top: 6em;
+}
+
+.project-head h2 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 57.6px;
+  letter-spacing: -0.96px;
+  color: #E5E2E1;
+}
+
+.project-head p {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 28.8px;
+  color: #C2C6D6;
+  max-width: 70%;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  background-color: #1C1B1B;
+  border: 1px solid #424754;
+  overflow: hidden;
+}
+
+.project-card .top {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-card .top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card .bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25em;
+  gap: 0.75em;
+}
+
+.project-card .about {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  align-items: flex-start;
+}
+
+.project-card .title {
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #E5E2E1;
+  text-align: left;
+}
+
+.project-card .abt-project {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #C2C6D6;
+}
+
+.project-card .tags {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.project-card .tags p {
+  background-color: #2A2A2A;
+  color: #ADC6FF;
+  border: 1px solid #424754;
+  padding: 0.25em 0.75em;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.project-card .links {
+  display: flex;
+  gap: 0.75em;
+  width: 100%;
+}
+
+.project-card .links a {
+  flex: 1;
+  text-align: center;
+  padding: 0.6em 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid #424754;
+  color: #C2C6D6;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.project-card .links a:first-child {
+  background-color: transparent;
+}
+
+.project-card .links a:last-child {
+  background-color: #ADC6FF;
+  color: #002E6A;
+  border-color: #ADC6FF;
+  font-weight: 600;
+}
+
 footer p,
 footer li {
   color: #C2C6D6;
@@ -422,4 +552,260 @@ footer .left {
   width: 100%;
   margin: 2em 0;
   margin-top: 6em;
+}
+
+/* ── Hamburger button (hidden on desktop) ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #E5E2E1;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile dropdown menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #1C1B1B;
+  border-bottom: 1px solid #424754;
+  width: 100%;
+}
+
+.mobile-menu a {
+  padding: 1em 10%;
+  font-family: 'Inter', sans-serif;
+  color: #C2C6D6;
+  font-size: 16px;
+  border-bottom: 1px solid #2A2A2A;
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
+}
+
+/* ── Tablet: 768px and below ── */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar,
+  footer {
+    width: 92%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  /* Sections */
+  section {
+    width: 92%;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column-reverse;
+    width: 92%;
+    margin: 3em 0;
+    gap: 1.5em;
+    align-items: center;
+  }
+
+  .hero .right {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .hero .bottom {
+    flex-direction: column;
+  }
+
+  .hero a {
+    text-align: center;
+  }
+
+  /* About */
+  div.about {
+    flex-direction: column;
+    width: 92%;
+    margin: 3em 0;
+  }
+
+  .about img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .about h2 {
+    font-size: 32px;
+  }
+
+  /* Education */
+  .education-section {
+    width: 92%;
+    margin-bottom: 3em;
+  }
+
+  .school-card .top {
+    flex-direction: column;
+    gap: 0.75em;
+  }
+
+  .school-card .uni {
+    font-size: 18px;
+  }
+
+  .courseworks {
+    flex-wrap: wrap;
+  }
+
+  /* Skills */
+  .skills-section {
+    width: 92%;
+    margin-bottom: 3em;
+  }
+
+  .skills-head {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .skill-card {
+    gap: 2em;
+    width: 100%;
+  }
+
+  /* Contact */
+  .contact-section {
+    width: 92%;
+    margin-top: 3em;
+  }
+
+  .contact-section h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .contact-head p {
+    font-size: 15px;
+  }
+
+  form .user-details {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .name,
+  .email {
+    width: 100%;
+  }
+
+  .message textarea {
+    height: 200px;
+  }
+
+  /* Projects */
+  .project-head {
+    width: 92%;
+    margin-top: 3em;
+  }
+
+  .project-head h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .project-head p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .projects-list {
+    width: 92%;
+    justify-content: center;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* Footer */
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 1.5em 0;
+    width: 92%;
+  }
+
+  footer ul {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+/* ── Small phones: 480px and below ── */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.75rem;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .about h2,
+  .skills-head,
+  .contact-section h2,
+  .project-head h2 {
+    font-size: 26px;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .school-card {
+    padding: 1.25em;
+  }
+
+  .contact-section form {
+    padding: 1.25em;
+  }
 }
